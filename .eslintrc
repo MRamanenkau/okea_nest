@@ -1,0 +1,123 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "tsconfig.json",
+    "sourceType": "module",
+  },
+  "plugins": [
+    "@typescript-eslint/eslint-plugin",
+    "import",
+  ],
+  "extends": [
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "prettier",
+    "prettier/@typescript-eslint",
+  ],
+  "root": true,
+  "env": {
+    "node": true,
+    "jest": true,
+  },
+  "rules": {
+    "array-bracket-spacing": "error",
+    "camelcase": "error",
+    "comma-dangle": ["error", "always-multiline"],
+    "curly": ["error", "all"],
+    "dot-location": ["error", "property"],
+    "dot-notation": "error",
+    "eol-last": "error",
+    "key-spacing": "error",
+    "keyword-spacing": "error",
+    "lines-around-directive": "error",
+    "lines-between-class-members": ["error", "always", { "exceptAfterSingleLine": true }],
+    "comma-spacing": ["error"],
+    "max-len": ["error", { "code": 120 }],
+    "no-duplicate-imports": "error",
+    "no-empty": ["error", { "allowEmptyCatch": true }],
+    "no-mixed-spaces-and-tabs": "error",
+    "no-multi-spaces": "error",
+    "no-multi-str": "error",
+    "no-multiple-empty-lines": ["error", { "max": 1, "maxEOF": 1, "maxBOF": 0 }],
+    "no-throw-literal": "error",
+    "no-trailing-spaces": "error",
+    "no-console": "error",
+    "one-var": ["error", "never"],
+    "object-curly-spacing": ["error", "always"],
+    "object-shorthand": "error",
+    "padded-blocks": ["error", "never"],
+    "quote-props": ["error", "consistent"],
+    "space-before-blocks": "error",
+    "space-in-parens": "error",
+    "space-infix-ops": "error",
+    "space-unary-ops": "error",
+    "spaced-comment": "error",
+    "yoda": ["error", "never", { "onlyEquality": true }],
+
+    "eqeqeq": "error",
+    "no-bitwise": "error",
+    "no-extra-bind": "error",
+    "no-implicit-coercion": ["error", { "boolean": false, "string": false, "number": true }],
+    "no-import-assign": "error",
+    "no-labels": "error",
+    "no-self-compare": "error",
+    "no-sequences": "error",
+    "no-unneeded-ternary": "error",
+    "no-with": "error",
+    "radix": ["error", "always"],
+
+    "import/first": "error",
+    "import/newline-after-import": "error",
+    "import/no-amd": "error",
+    "import/no-anonymous-default-export": "error",
+    "import/no-commonjs": "error",
+    "import/no-webpack-loader-syntax": "error",
+
+    // Extension rules
+    "brace-style": "off",
+    "@typescript-eslint/brace-style": "error",
+    "func-call-spacing": "off",
+    "@typescript-eslint/func-call-spacing": "error",
+    "indent": ["error", 4, { "SwitchCase": 1 }],
+    "@typescript-eslint/indent": ["error", 4, { "SwitchCase": 1 }],
+    "no-unused-expressions": "off",
+    "@typescript-eslint/no-unused-expressions": "error",
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": ["error", { "argsIgnorePattern": "^_", "ignoreRestSiblings": true }],
+    "quotes": "off",
+    "@typescript-eslint/quotes": ["error", "single"],
+    "semi": "off",
+    "@typescript-eslint/semi": "error",
+    "space-before-function-paren": "off",
+    "@typescript-eslint/space-before-function-paren": ["error", { "anonymous": "always", "named": "never" }],
+
+    // Typescript-specific rules
+    "@typescript-eslint/array-type": ["error", { "default": "array-simple" }],
+    "@typescript-eslint/consistent-type-assertions": ["error", { "assertionStyle": "as", "objectLiteralTypeAssertions": "never" }],
+    "@typescript-eslint/explicit-function-return-type": "off", // will be removed in next recommended ruleset version
+    "@typescript-eslint/explicit-member-accessibility": ["error", { "accessibility": "explicit", "overrides": { "constructors": "no-public" } }],
+    "@typescript-eslint/member-delimiter-style": "off", // will be removed in next recommended ruleset version
+    "@typescript-eslint/member-ordering": "error",
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "interface",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "^I[A-Z]",
+          "match": false
+        },
+      },
+      {
+        "selector": "variable",
+        "types": ["boolean"],
+        "format": ["PascalCase"],
+        "prefix": ["is", "should", "has", "can", "did", "will"]
+      }
+    ],
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "@typescript-eslint/no-use-before-define": "off", // will be removed in next recommended ruleset version
+    "@typescript-eslint/unified-signatures": "error"
+  },
+}
